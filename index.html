@@ -15,6 +15,141 @@
   </style>
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anish's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    /* Splash Screen */
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #2d3e50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2s forwards;
+    }
+
+    #splash h1 {
+      font-size: 3em;
+    }
+
+    #splash p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* Portfolio Header */
+    header {
+      background: #2d3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    p.subtitle {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    /* Projects */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .project {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 10px;
+      width: 420px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 460px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e4e4e4;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash">
+    <h1>Welcome</h1>
+    <p>Loading Anish's Portfolio...</p>
+  </div>
+
+  <!-- Main Site -->
+  <header>
+    <h1>Anish's Portfolio</h1>
+    <p class="subtitle">Welcome to my interactive project showcase</p>
+  </header>
+
+  <main class="projects">
+    <div class="project"><iframe src=""></iframe></div>
+    <div class="project"><iframe src=""></iframe></div>
+    <div class="project"><iframe src=""></iframe></div>
+    <div class="project"><iframe src=""></iframe></div>
+    <div class="project"><iframe src=""></iframe></div>
+    <div class="project"><iframe src=""></iframe></div>
+  </main>
+
+  <footer>
+    &copy; 2025 Anish Kulkarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
 
   <h1>Anish's Portfolio</h1>
 
