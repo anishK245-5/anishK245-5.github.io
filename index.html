@@ -1,18 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anish's Portfolio</title>
   <style>
-    h1 {
-      text-align: center;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .project {
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    /* Splash Screen */
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2d3e50;
+      color: white;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    header {
+      background: #2d3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p.tagline {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #2d3e50;
+      margin-bottom: 15px;
+    }
+
+    ul.interests {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
       justify-content: center;
       margin-top: 20px;
     }
+
+    .project {
+      width: 420px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+    }
+
+    .project iframe {
+      width: 100%;
+      height: 460px;
+      border: none;
+    }
+
+    .project a {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      background: #2d3e50;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-top: 1px solid #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e4e4e4;
+      color: #777;
+      margin-top: 40px;
+    }
   </style>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash">
+    <h1>Welcome to Anish's Portfolio</h1>
+  </div>
+
+  <!-- Main Content -->
+  <header>
+    <h1>Anish's Portfolio</h1>
+    <p class="tagline">High school student passionate about cars, and am curious about how cars work.</p>
+  </header>
+
+  <section>
+    <h2>Interests</h2>
+    <ul class="interests">
+      <li>Food</li>
+      <li>Cars</li>
+      <li>Music</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project">
+        <iframe src="https://academy.cs.cmu.edu/sharing/lawnGreenCamel277031/embed"></iframe>
+        <a href="project1.html" target="_blank">Project 1: Illinois Global Scholar</a>
+      </div>
+
+      <!-- Add future projects like this -->
+      <div class="project">
+        <iframe src=""></iframe>
+        <a href="project2.html" target="_blank">Project 2 (Coming Soon)</a>
+      </div>
+
+      <div class="project">
+        <iframe src=""></iframe>
+        <a href="project3.html" target="_blank">Project 3 (Coming Soon)</a>
+      </div>
+
+      <div class="project">
+        <iframe src=""></iframe>
+        <a href="project4.html" target="_blank">Project 4 (Coming Soon)</a>
+      </div>
+
+      <div class="project">
+        <iframe src=""></iframe>
+        <a href="project5.html" target="_blank">Project 5 (Coming Soon)</a>
+      </div>
+
+      <div class="project">
+        <iframe src=""></iframe>
+        <a href="project6.html" target="_blank">Project 6 (Coming Soon)</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Anish Kulkarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
   <h1>Anish's Portfolio</h1>
 <a href="project1.html">Project 1: Illinois Global Scholar</a>
   <div class="project">
@@ -26,7 +203,7 @@
 </body>
   <div class="project">
   <iframe width="410" height="460"
-    src="https://academy.cs.cmu.edu/sharing/anotherProjectURL/embed"
+    src="https://academy.cs.cmu.edu/sharing/redSpider672681/embed">
     frameborder="0"
     allowfullscreen>
   </iframe>
