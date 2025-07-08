@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 2- Global Hunger Awareness</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
 
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2d3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    #splash iframe {
+      width: 420px;
+      height: 460px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    header {
+      background: #2d3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #2d3e50;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e4e4e4;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen with Embedded Project -->
+  <div id="splash">
+    <h1>Global Hunger Awareness</h1>
+    <iframe src="https://academy.cs.cmu.edu/sharing/lawnGreenCamel277031/embed"></iframe>
+  </div>
+
+  <header>
+    <h1>Anish's Portfolio</h1>
+    <p>Project 2: Global Hunger Awareness</p>
+  </header>
+
+  <main>
+    <h2>About the Project</h2>
+    <p>
+      I created an interactive slideshow using code to spread the awareness for Global Hunger. It presents the problem of global world hunger
+      and solution. The goal was to express these global challenges through symbolic shapes and clear labels.
+    </p>
+
+    <h2>Concepts Learned</h2>
+    <ul>
+      <li>Included more interactiveness</li>
+      <li>Learned how to program code with mouse buttons</li>
+    </ul>
+
+    <h2>Sample Code</h2>
+    <pre>
+       if(counter.value==3):
+        background.toFront()
+        background.fill=rgb(247,165,148)
+        progress1.toFront()
+        progress2.toFront()
+        progress3.toFront()
+        progress4.toFront()
+        progressBorder.toFront()
+        progressEnd.toFront()
+        progress4.visible=True
+        progressEnd.centerX+=70
+        cjLogo(50,70,'black','yellow')
+        akLogo(350,60,'steelBlue',rgb(247,165,148))
+        Oval(200,110,270,80,fill='white',border='black',opacity=70,borderWidth=5)
+        Label('Things to do',200,110,bold=True,font='montserrat',size=35)
+        Rect (10,165,380,170,fill='white',border='black',opacity=50)
+        Label('- Buy local and in season food. Try to grow some on your own.',200,190, size=18,font='caveat')
+        Label('- Dont waste food. Freeze leftovers to keep them fresh',200,220,size=18,font='caveat')
+        Label('- Donate to charity contributing to reduce Global Hunger',200,250,size=18,font='caveat')
+        Label('- Buy Fruits and veggies that have irregularities in shape',200,280,size=18,font='caveat')
+        Label('- Consume less meat to reduce environmental harm',200,310,size=18,font='caveat')
+    </pre>
+  </main>
+
+  <footer>
+    &copy; 2025 Anish Kulkarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
