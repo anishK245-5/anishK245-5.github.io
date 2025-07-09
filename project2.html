@@ -114,27 +114,51 @@
 
     <h2>Sample Code</h2>
     <pre>
-if(counter.value==3):
-    background.toFront()
-    background.fill=rgb(247,165,148)
-    progress1.toFront()
-    progress2.toFront()
-    progress3.toFront()
-    progress4.toFront()
-    progressBorder.toFront()
-    progressEnd.toFront()
-    progress4.visible=True
-    progressEnd.centerX+=70
-    cjLogo(50,70,'black','yellow')
-    akLogo(350,60,'steelBlue',rgb(247,165,148))
-    Oval(200,110,270,80,fill='white',border='black',opacity=70,borderWidth=5)
-    Label('Things to do',200,110,bold=True,font='montserrat',size=35)
-    Rect (10,165,380,170,fill='white',border='black',opacity=50)
-    Label('- Buy local and in season food. Try to grow some on your own.',200,190, size=18,font='caveat')
-    Label('- Dont waste food. Freeze leftovers to keep them fresh',200,220,size=18,font='caveat')
-    Label('- Donate to charity contributing to reduce Global Hunger',200,250,size=18,font='caveat')
-    Label('- Buy Fruits and veggies that have irregularities in shape',200,280,size=18,font='caveat')
-    Label('- Consume less meat to reduce environmental harm',200,310,size=18,font='caveat')
+#this is Anish's logo
+def akLogo(akX,akY,akColor1,akColor2):
+    Circle(akX,akY,35,fill=akColor1)
+    Rect(akX-40,akY-35,75,30,fill=akColor2)
+    Line(akX,akY,akX,akY-40,fill=akColor1)
+    Line(akX-15,akY,akX-15,akY-40,fill=akColor1)
+    Line(akX+15,akY,akX+15,akY-40,fill=akColor1)
+#
+    if(counter.value==1):
+        background.toFront()
+        background.fill=rgb(171,151,87)
+        progress2.visible=True
+        progressEnd.centerX+=70
+        progress1.toFront()
+        progress2.toFront()
+        progressBorder.toFront()
+        progressEnd.toFront()
+        cjLogo(300,330,'orange','red')
+        akLogo(90,320,'wheat',rgb(171,151,87))
+#
+    if(counter.value==2):
+        background.toFront()
+        background.fill=rgb(244,247,148)
+        progress1.toFront()
+        progress2.toFront()
+        progress3.toFront()
+        progressBorder.toFront()
+        progressEnd.toFront()
+        progress3.visible=True
+        progressEnd.centerX+=70
+        Oval(200,60,170,80,border='black',fill='white',borderWidth=5,opacity=70)
+        Label('Targets',200,60,bold=True,font='montserrat',size=35)
+        Rect(10,110,380,235,fill='white',border='black',opacity=50)
+        Label('1. End all forms of Malnutrition',200,140,size=19,font='caveat')
+        Label('2. Universal Access to safe and nutritious food',200,165,size=19,font='caveat')
+        Label('3. Maintain the genetic diversity in food production',200,190,size=19,font='caveat')
+        Label('4. Increase productivity of small scale producers',200,215,size=19,font='caveat')
+        Label('5. Sustainable production and resilient practices',200,240,size=19,font='caveat')
+        Label('6. Invest in rural infrastructure and modern tech',200,265,size=19,font='caveat')
+        Label('7. Prevent agricultural trade restrictions',200,290,size=19,font='caveat')
+        Label('8. Ensure stable food markets and acces to information',200,315,size=19,font='caveat')
+        cjLogo(330,70,'darkGreen','Lime')
+        akLogo(70,65,'darkGrey',rgb(244,247,148))
+
+
     </pre>
   </main>
 
