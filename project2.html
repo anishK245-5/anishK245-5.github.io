@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project 2- Global Hunger Awareness</title>
+  <title>Project 2 – Global Hunger Awareness</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -50,13 +50,19 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 850px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
     h2 {
       color: #2d3e50;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
     }
 
     pre {
@@ -66,6 +72,7 @@
       border-radius: 8px;
       overflow-x: auto;
       font-family: monospace;
+      margin-top: 15px;
     }
 
     footer {
@@ -93,39 +100,41 @@
   <main>
     <h2>About the Project</h2>
     <p>
-      I created an interactive slideshow using code to spread the awareness for Global Hunger. It presents the problem of global world hunger
-      and solution. The goal was to express these global challenges through symbolic shapes and clear labels.
+      I created an interactive slideshow using code to spread awareness for global hunger.
+      It presents the problem of world hunger and explores possible solutions. The goal was to
+      express these challenges visually using symbolic shapes, meaningful text, and transitions.
     </p>
 
     <h2>Concepts Learned</h2>
     <ul>
-      <li>Included more interactiveness</li>
-      <li>Learned how to program code with mouse buttons</li>
+      <li>Using functions to organize code</li>
+      <li>Making the program interactive using conditions and user input</li>
+      <li>Layering shapes and text to simulate slides and transitions</li>
     </ul>
 
     <h2>Sample Code</h2>
     <pre>
-       if(counter.value==3):
-        background.toFront()
-        background.fill=rgb(247,165,148)
-        progress1.toFront()
-        progress2.toFront()
-        progress3.toFront()
-        progress4.toFront()
-        progressBorder.toFront()
-        progressEnd.toFront()
-        progress4.visible=True
-        progressEnd.centerX+=70
-        cjLogo(50,70,'black','yellow')
-        akLogo(350,60,'steelBlue',rgb(247,165,148))
-        Oval(200,110,270,80,fill='white',border='black',opacity=70,borderWidth=5)
-        Label('Things to do',200,110,bold=True,font='montserrat',size=35)
-        Rect (10,165,380,170,fill='white',border='black',opacity=50)
-        Label('- Buy local and in season food. Try to grow some on your own.',200,190, size=18,font='caveat')
-        Label('- Dont waste food. Freeze leftovers to keep them fresh',200,220,size=18,font='caveat')
-        Label('- Donate to charity contributing to reduce Global Hunger',200,250,size=18,font='caveat')
-        Label('- Buy Fruits and veggies that have irregularities in shape',200,280,size=18,font='caveat')
-        Label('- Consume less meat to reduce environmental harm',200,310,size=18,font='caveat')
+if(counter.value==3):
+    background.toFront()
+    background.fill=rgb(247,165,148)
+    progress1.toFront()
+    progress2.toFront()
+    progress3.toFront()
+    progress4.toFront()
+    progressBorder.toFront()
+    progressEnd.toFront()
+    progress4.visible=True
+    progressEnd.centerX+=70
+    cjLogo(50,70,'black','yellow')
+    akLogo(350,60,'steelBlue',rgb(247,165,148))
+    Oval(200,110,270,80,fill='white',border='black',opacity=70,borderWidth=5)
+    Label('Things to do',200,110,bold=True,font='montserrat',size=35)
+    Rect (10,165,380,170,fill='white',border='black',opacity=50)
+    Label('- Buy local and in season food. Try to grow some on your own.',200,190, size=18,font='caveat')
+    Label('- Dont waste food. Freeze leftovers to keep them fresh',200,220,size=18,font='caveat')
+    Label('- Donate to charity contributing to reduce Global Hunger',200,250,size=18,font='caveat')
+    Label('- Buy Fruits and veggies that have irregularities in shape',200,280,size=18,font='caveat')
+    Label('- Consume less meat to reduce environmental harm',200,310,size=18,font='caveat')
     </pre>
   </main>
 
