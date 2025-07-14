@@ -114,6 +114,14 @@
 
     <h2>Sample Code</h2>
     <pre> 
+
+    
+def onMousePress(mouseX,mouseY):
+                gainMoney1(mouseX,mouseY,1)
+      
+def onMouseRelease(mouseX,mouseY):
+      gainMoney1(mouseX,mouseY,2)
+
 #money button code (called multiple times)#
 def gainMoney1(mouseX,mouseY,mouseType):
     if(mouseX<290,mouseY>275):
@@ -122,11 +130,6 @@ def gainMoney1(mouseX,mouseY,mouseType):
             fundRaiser.fill=rgb(230,1,1)
         if(mouseType==2):
             fundRaiser.fill=rgb(192,1,1)
-        if(mouseY>290):
-                gainMoney1(mouseX,mouseY,1)
-      gainMoney1(mouseX,mouseY,2)
-
-
 
     </pre>
   </main>
