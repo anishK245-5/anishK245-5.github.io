@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 3 – Tree Planting Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
 
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2d3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    #splash iframe {
+      width: 420px;
+      height: 460px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    header {
+      background: #2d3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #2d3e50;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e4e4e4;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen with Embedded Project -->
+  <div id="splash">
+    <h1>Tree Planting Game</h1>
+    <iframe src="https://academy.cs.cmu.edu/sharing/aquamarineMonkey528909/embed"></iframe>
+  </div>
+
+  <header>
+    <h1>Anish's Portfolio</h1>
+    <p>Project 3: Tree Planting Game</p>
+  </header>
+
+  <main>
+    <h2>About the Project</h2>
+    <p>
+     In this project me and my partner CJ Pabalan created a game where you are supposed to raise money and buy seeds to clear the polluted sky.
+     This addresses the age old problem of global warming which we gave the simple solution to raise money and plant seeds to contribute to help
+     the environment. 
+    </p>
+
+    <h2>Concepts Learned</h2>
+    <ul>
+      <li>Using mouse interatctions</li>
+      <li>Making parameters for the mouse clicks to do different actions</li>
+      <li>Spreading a good messsage in a fun and simple way</li>
+    </ul>
+
+    <h2>Sample Code</h2>
+    <pre> 
+#money button code (called multiple times)#
+def gainMoney1(mouseX,mouseY,mouseType):
+    if(mouseX<290,mouseY>275):
+        if(mouseType==1):
+            moneyCount2.value+=1
+            fundRaiser.fill=rgb(230,1,1)
+        if(mouseType==2):
+            fundRaiser.fill=rgb(192,1,1)
+        if(mouseY>290):
+                gainMoney1(mouseX,mouseY,1)
+      gainMoney1(mouseX,mouseY,2)
+
+
+
+    </pre>
+  </main>
+
+  <footer>
+    &copy; 2025 Anish Kulkarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
