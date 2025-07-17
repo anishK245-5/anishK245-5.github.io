@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 4 – Environmental Conciousness Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
 
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2d3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    #splash iframe {
+      width: 420px;
+      height: 460px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    header {
+      background: #2d3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #2d3e50;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e4e4e4;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen with Embedded Project -->
+  <div id="splash">
+    <h1>Environmental Conciousness Quiz</h1>
+    <iframe src="https://academy.cs.cmu.edu/sharing/aquamarineMonkey528909/embed"></iframe>
+  </div>
+
+  <header>
+    <h1>Anish's Portfolio</h1>
+    <p>Project 4: Environmental Conciousness Quiz</p>
+  </header>
+
+  <main>
+    <h2>About the Project</h2>
+    <p>
+     In this project me and my partner CJ Pabalan created a quiz that counts your score based on the answers you select.
+     It asks questions based on what you would do for the environment and you have to try to make the right choice. The lower the score, 
+     the more you are likely to help the environment. 
+    </p>
+
+    <h2>Concepts Learned</h2>
+    <ul>
+      <li>Using mouse and keyboard interatctions</li>
+      <li>Using if-elif-else statements in python</li>
+      <li>Testing the user's contribution towards a better world</li>
+    </ul>
+
+    <h2>Sample Code</h2>
+    <pre> 
+ 
+#question 4#
+question4=Group(
+    Label('Your shower uses a lot of water and,',200,100,size=18),
+    Label('your family wants to start using less.',200,125,size=18),
+    Label('What is the best decision you can make', 200,150,size=18, font='arial'),
+    Label('to save on your bill?', 200,175,size=18, font='arial'),
+    Rect(75,200,250,100,fill='lightGrey',border='black',borderWidth=5),
+    Label('1. 10-20 minute cold shower', 200, 220, size=15),
+    Label('2. 10-20 minute hot shower',200,240,size=15),
+    Label('3. 5-10 minute cold shower',200,260,size=15),
+    Label('4. 5-10 minute hot shower',200,280,size=15),
+    visible=False)
+#question 5#
+question5=Group(
+    Label('You recently moved into a new home,',200,100,size=18),
+    Label('but want to reduce power usage.',200,125,size=18),
+    Label('What is the most conservative choice,', 200,150,size=18, font='arial'),
+    Label('in regards to lights, to save energy?', 200,175,size=18, font='arial'),
+    Rect(10,200,380,100,fill='lightGrey',border='black',borderWidth=5),
+    Label('1. Use bright light bulbs', 200, 220, size=15),
+    Label('2. Leave the lights on if you will be back soon',200,240,size=15),
+    Label('3. Turn the lights on when you enter and off when you leave',200,260,size=13),
+    Label('4. Leave the lights on over night so the house stays lit',200,280,size=13),
+    visible=False)
+#question 6#
+question6=Group(
+    Label('Your old phone still works but,',200,100,size=18),
+    Label('a new phone has come out.',200,125,size=18),
+    Label('What is the best environmental choice?', 200,150,size=18, font='arial'),
+    Rect(5,200,390,100,fill='lightGrey',border='black',borderWidth=5),
+    Label('1. Refurbish your old phone and get the new one', 200, 220, size=15),
+    Label('2. Use your old phone till it doesnt work',200,240,size=15),
+    Label('3. Throw your phone away.',200,260,size=15),
+    Label('4. Keep your phone as a backup and get the new phone',200,280,size=15),
+    visible=False)
+
+    </pre>
+  </main>
+
+  <footer>
+    &copy; 2025 Anish Kulkarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
