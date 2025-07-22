@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 5 – Food Delivery Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
 
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2d3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    #splash iframe {
+      width: 420px;
+      height: 460px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    header {
+      background: #2d3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #2d3e50;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e4e4e4;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen with Embedded Project -->
+  <div id="splash">
+    <h1>Environmental Conciousness Quiz</h1>
+    <iframe src="https://academy.cs.cmu.edu/sharing/peruFish904153/embed"></iframe>
+  </div>
+
+  <header>
+    <h1>Anish's Portfolio</h1>
+    <p>Project 5: Food Delivery Game</p>
+  </header>
+
+  <main>
+    <h2>About the Project</h2>
+    <p>
+     In this project me and my partner CJ Pabalan created a game that counts your pollution score based on how many times you press the arrow keys
+     to drive the car. Your main goal is to collect food packages scattered on the map and try to bring them back into the building. 
+     The sample code written down at the bottom makes the game draw the rocks and bushes. 
+    </p>
+
+    <h2>Concepts Learned</h2>
+    <ul>
+      <li>Using mouse and keyboard interatctions</li>
+      <li>Using "or" and "and" statements in python</li>
+      <li>Creating a fun way to promote Hunger Awareness</li>
+    </ul>
+
+    <h2>Sample Code</h2>
+    <pre> 
+      
+ def drawRock(rockX,rockY):
+    rockGroup=Group(
+        Polygon(65,60,90,65,95,105,55,105,fill=rgb(90,90,90)),
+        Polygon(58,77,74,70,83,105,55,105,fill='slateGrey')
+        )
+    rockGroup.centerX=rockX
+    rockGroup.centerY=rockY
+
+def drawBush(bushX,bushY,berries):
+    if(berries==0):
+        bushGroup1=Group(
+            Rect(60,40,30,25,fill='green'),
+            Circle(75,40,15,fill=rgb(33,98,17)),
+            Circle(65,50,15,fill='green'),
+            Circle(85,50,15,fill='green')
+            )
+        bushGroup1.centerX=bushX
+        bushGroup1.centerY=bushY
+    if(berries==3):
+        bushGroup2=Group(
+            Rect(60,40,30,25,fill='green'),
+            Circle(75,40,15,fill=rgb(33,98,17)),
+            Circle(65,50,15,fill='green'),
+            Circle(85,50,15,fill='green'),
+            Circle(90,50,3,fill='red'),
+            Circle(65,55,3,fill='red'),
+            Circle(75,45,3,fill='red')
+            )
+        bushGroup2.centerX=bushX
+        bushGroup2.centerY=bushY
+
+    </pre>
+  </main>
+
+  <footer>
+    &copy; 2025 Anish Kulkarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
