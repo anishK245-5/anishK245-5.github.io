@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 6 – Affordable and Clean Energy Games</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2d3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    #splash iframe {
+      width: 420px;
+      height: 460px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    header {
+      background: #2d3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #2d3e50;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e4e4e4;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen with Embedded Project -->
+  <div id="splash">
+    <h1>Affordable and Clean Energy Games</h1>
+    <iframe src="https://academy.cs.cmu.edu/sharing/khakiKitten597181/embed"></iframe>
+  </div>
+
+  <header>
+    <h1>Anish's Portfolio</h1>
+    <p>Project 6: Affordable and Clean Energy Games</p>
+  </header>
+
+  <main>
+    <h2>About the Project</h2>
+    <p>
+     In this project me and my partner CJ Pabalan created two games. One built by me and one built by CJ. CJ's game is on clean electricity. 
+     The sun is presented, and your cursor has to be on the sun to gain electricity. After a certain amount of energy points, 
+     the game will congragulate you. I created a game where there is a fueling station with a sign saying "Renewable Fuel". I am a big believer
+     in renewable sources of fuel and I am able to show it in this game.
+    </p>
+
+    <h2>Concepts Learned</h2>
+    <ul>
+      <li>Making animations by using onStep function </li>
+      <li>Keeping the same interactiveness as my other games</li>
+      <li>Creating a fun way to promote Clean and afffordable energies</li>
+    </ul>
+
+    <h2>Sample Code</h2>
+    <pre> 
+sustainableFuelCenter = Group(Star(150,375,26,6,roundness=85,fill='lightGrey',border='darkBlue',borderWidth=5,rotateAngle=30),
+    visible=False) 
+fuelSign=Group(
+    Line(330,400,330,250,lineWidth=5),
+    Rect(250,175,150,75,fill='lightGrey',border='black'),
+    Label('Renewable Fuel!',330,215,bold=True,size=15),
+    visible=False
+    )
+fuelNozzle=Line(176,375,179,380,visible=False)
+fuelCounter=Label(0,200,100,bold=True,size=15)
+truckCounter=Label('Cars Served:',330,230)
+truckCounterNumber=Label(0,375,230)
+truck=Group(
+    Polygon(230,360,240,360,250,375,250,380,230,380,230,375,fill='brown'),
+    Rect(233,365,8,6,fill=gradient(rgb(150,150,150),'grey', rgb(150,150,150),'grey',start='left')),
+    Rect(195,371,35,9,fill=gradient(rgb(150,150,150),'grey', rgb(150,150,150),'grey',start='left')),
+    Circle(240,385,7),
+    Circle(210,385,7),
+    Circle(240,385,3,fill='grey'),
+    Circle(210,385,3,fill='grey'),
+    visible=False
+    )
+game2Screen=Group(sustainableFuelCenter,truck,fuelSign,fuelNozzle,fuelCounter,truckCounter, truckCounterNumber,visible=False)
+def pageMover(page):
+      game2Screen.visible=True
+def onStep():
+      if game2Screen.visible==True:
+        if fuelCounter.value>=100:
+            truck.left+=1
+        if truck.right>=400:
+            truck.centerX=210
+            fuelCounter.value=0
+            truckCounterNumber.value+=1
+        if truckCounterNumber.value==10:
+            winScreen(2,True)
+def onMousePress(mouseX,mouseY):
+      if game2Button.contains(mouseX,mouseY):
+          if(game1Screen.visible!=True):
+              pageMover(2)
+              splashScreen.visible=False
+              app.game2On=True
+
+    </pre>
+  </main>
+
+  <footer>
+    &copy; 2025 Anish Kulkarni. All rights reserved.
+  </footer>
+
+</body>
+</html>
 
